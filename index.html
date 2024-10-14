@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Restaurant Menu</h1>
+    <nav>
+      <a href="cart.html">Go to Cart</a>
+    </nav>
+  </header>
+
+  <section class="menu">
+    <div class="dish" data-id="1" data-name="Dish 1" data-price="10">
+      <img src="dish1.jpg" alt="Dish 1">
+      <h2>Dish 1</h2>
+      <p>Price: $160.00</p>
+      <button onclick="addToCart(1, 'Dish 1', 160)">Add to Cart</button>
+    </div>
+    <div class="dish" data-id="2" data-name="Dish 2" data-price="15">
+      <img src="dish2.jpg" alt="Dish 2">
+      <h2>Dish 2</h2>
+      <p>Price: $105.00</p>
+      <button onclick="addToCart(2, 'Dish 2', 105)">Add to Cart</button>
+    </div>
+    <!-- Add more dishes similarly -->
+  </section>
+
+  <script>
+    function addToCart(id, name, price) {
+      // Get existing cart from localStorage or initialize an empty array
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      // Check if item is already in the cart
+      const existingItem = cart.find(item => item.id === id);
+      if (existingItem) {
+        existingItem.quantity++;
+      } else {
+        cart.push({ id, name, price, quantity: 1 });
+      }
+
+      // Save updated cart back to localStorage
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      alert(`${name} has been added to the cart!`);
+    }
+  </script>
+</body>
+</html>

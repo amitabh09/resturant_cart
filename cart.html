@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Your Cart</h1>
+    <nav>
+      <a href="index.html">Back to Menu</a>
+    </nav>
+  </header>
+
+  <section class="cart">
+    <table id="cart-items">
+      <thead>
+        <tr>
+          <th>Dish</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="total">
+      <h2>Total Price: $<span id="total-price">0.00</span></h2>
+    </div>
+  </section>
+
+  <script>
+    function displayCart() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartItemsTbody = document.querySelector('#cart-items tbody');
+      const totalPriceSpan = document.getElementById('total-price');
+
+      let totalPrice = 0;
+
+      cart.forEach(item => {
+        const subtotal = item.price * item.quantity;
+        totalPrice += subtotal;
+
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${item.name}</td>
+          <td>$${item.price}</td>
+          <td>${item.quantity}</td>
+          <td>$${subtotal.toFixed(2)}</td>
+        `;
+        cartItemsTbody.appendChild(row);
+      });
+
+      totalPriceSpan.textContent = totalPrice.toFixed(2);
+    }
+
+    // Display the cart when the page loads
+    window.onload = displayCart;
+  </script>
+</body>
+</html>
