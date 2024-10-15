@@ -15,15 +15,33 @@
   </header>
 
   <section class="menu">
+    Italian
     <div class="dish" data-id="1" data-name="Dish 1" data-price="10">
-      <img src="dish1.jpg" alt="Dish 1">
-      <h2>Dish 1</h2>
+      <img src="./images/pizza.jpg" alt="Dish 1">
+      <h2>Pizza</h2>
       <p>Price: $160.00</p>
       <button onclick="addToCart(1, 'Dish 1', 160)">Add to Cart</button>
     </div>
     <div class="dish" data-id="2" data-name="Dish 2" data-price="15">
-      <img src="dish2.jpg" alt="Dish 2">
-      <h2>Dish 2</h2>
+      <img src="./images/burger.jpg" alt="Dish 2">
+      <h2>Burger</h2>
+      <p>Price: $105.00</p>
+      <button onclick="addToCart(2, 'Dish 2', 105)">Add to Cart</button>
+    </div>
+    <!-- Add more dishes similarly -->
+  </section>
+
+  <section class="menu">
+    Chinese
+    <div class="dish" data-id="1" data-name="Dish 1" data-price="10">
+      <img src="./images/paasta.jpg" alt="Dish 1">
+      <h2>Paasta</h2>
+      <p>Price: $160.00</p>
+      <button onclick="addToCart(1, 'Dish 1', 160)">Add to Cart</button>
+    </div>
+    <div class="dish" data-id="2" data-name="Dish 2" data-price="15">
+      <img src="./images/noodles.jpg" alt="Dish 2">
+      <h2>Noodles</h2>
       <p>Price: $105.00</p>
       <button onclick="addToCart(2, 'Dish 2', 105)">Add to Cart</button>
     </div>
@@ -46,7 +64,7 @@
       // Save updated cart back to localStorage
       localStorage.setItem('cart', JSON.stringify(cart));
 
-      alert(`${name} has been added to the cart!`);
+      //alert(`${name} has been added to the cart!`);
     }
   </script>
 </body>
