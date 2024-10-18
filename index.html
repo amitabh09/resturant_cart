@@ -7,46 +7,57 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#italian">Italian</a></li>
+      <li><a href="#chinese">Chinese</a></li>
+      <li><a href="cart.html">Go to Cart</a></li>
+    </ul>
+  </nav>
+
   <header>
     <h1>Restaurant Menu</h1>
-    <nav>
-      <a href="cart.html">Go to Cart</a>
-    </nav>
   </header>
 
-  <section class="menu">
-    Italian
-    <div class="dish" data-id="1" data-name="Dish 1" data-price="10">
-      <img src="./images/pizza.jpg" alt="Dish 1">
-      <h2>Pizza</h2>
+  <section class="menu" id="italian">
+    <h2>Italian</h2>
+    <div class="dish" data-id="1" data-name="Pizza" data-price="160">
+      <img src="./images/pizza.jpg" alt="Pizza">
+      <h3>Pizza</h3>
       <p>Price: $160.00</p>
-      <button onclick="addToCart(1, 'Dish 1', 160)">Add to Cart</button>
+      <button onclick="addToCart(1, 'Pizza', 160)">Add to Cart</button>
     </div>
-    <div class="dish" data-id="2" data-name="Dish 2" data-price="15">
-      <img src="./images/burger.jpg" alt="Dish 2">
-      <h2>Burger</h2>
+    <div class="dish" data-id="2" data-name="Burger" data-price="105">
+      <img src="./images/burger.jpg" alt="Burger">
+      <h3>Burger</h3>
       <p>Price: $105.00</p>
-      <button onclick="addToCart(2, 'Dish 2', 105)">Add to Cart</button>
+      <button onclick="addToCart(2, 'Burger', 105)">Add to Cart</button>
     </div>
-    <!-- Add more dishes similarly -->
   </section>
 
-  <section class="menu">
-    Chinese
-    <div class="dish" data-id="1" data-name="Dish 1" data-price="10">
-      <img src="./images/paasta.jpg" alt="Dish 1">
-      <h2>Paasta</h2>
+  <section class="menu" id="chinese">
+    <h2>Chinese</h2>
+    <div class="dish" data-id="3" data-name="Paasta" data-price="160">
+      <img src="./images/paasta.jpg" alt="Paasta">
+      <h3>Paasta</h3>
       <p>Price: $160.00</p>
-      <button onclick="addToCart(1, 'Dish 1', 160)">Add to Cart</button>
+      <button onclick="addToCart(3, 'Paasta', 160)">Add to Cart</button>
     </div>
-    <div class="dish" data-id="2" data-name="Dish 2" data-price="15">
-      <img src="./images/noodles.jpg" alt="Dish 2">
-      <h2>Noodles</h2>
+    <div class="dish" data-id="4" data-name="Noodles" data-price="105">
+      <img src="./images/noodles.jpg" alt="Noodles">
+      <h3>Noodles</h3>
       <p>Price: $105.00</p>
-      <button onclick="addToCart(2, 'Dish 2', 105)">Add to Cart</button>
+      <button onclick="addToCart(4, 'Noodles', 105)">Add to Cart</button>
     </div>
-    <!-- Add more dishes similarly -->
   </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Restaurant Name. All rights reserved.</p>
+  </footer>
 
   <script>
     function addToCart(id, name, price) {
@@ -63,8 +74,6 @@
 
       // Save updated cart back to localStorage
       localStorage.setItem('cart', JSON.stringify(cart));
-
-      //alert(`${name} has been added to the cart!`);
     }
   </script>
 </body>

@@ -19,6 +19,37 @@ body {
     background-color: #f04;
     border-radius: 5px;
   }
+  /* Navbar Styling */
+.navbar {
+  background-color: #333; /* Dark background for the navbar */
+  overflow: hidden; /* Ensures no overflow issues */
+}
+
+.navbar-list {
+  list-style-type: none; /* Removes bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Aligns items horizontally */
+  justify-content: center; /* Centers the navigation items */
+}
+
+.navbar-list li {
+  margin: 0 1rem; /* Adds some space between the nav items */
+}
+
+.navbar-list li a {
+  color: white; /* White text */
+  text-decoration: none; /* Removes underline */
+  padding: 1rem; /* Padding around the nav links */
+  display: block; /* Ensures the link fills the entire li area */
+}
+
+.navbar-list li a:hover {
+  background-color: #ddd; /* Changes background on hover */
+  color: black; /* Changes text color on hover */
+  border-radius: 5px; /* Adds rounded corners on hover */
+}
+
   
   .menu, .cart {
     display: flex;
