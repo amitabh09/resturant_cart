@@ -1,0 +1,52 @@
+/* Common */
+*{
+    margin: 0px;
+}
+.flexSBC {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.padd60px12vw {
+    padding: 60px 12vw;
+}
+/* Common */
+
+/* Navbar */
+header {
+    background-color: rgba(99, 94, 94, 0.919);
+    padding: 10px 100px;
+}
+nav {
+    width: 30vw;
+    height: 60px;
+}
+nav>a {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 550;
+}
+header>img {
+    height: 40px;
+}
+/* Navbar */
+
+/* Section 1 */
+.sec1 {
+    background-color: aliceblue;
+}
+.sec1>h1,.sec1>h2 {
+    padding: 10px 0px;
+    color: rgba(23, 23, 228, 0.748);
+    font-weight: 600;
+}
+/* Section 1 */
+
+/* Section 2 */
+.sec2Image {
+    width: 200px;
+}
+/* Section 2 */
