@@ -2,11 +2,23 @@
 *{
     margin: 0px;
 }
-.flexSBC {
+.rowFlexSBC {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+.columnFlexSBC {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.gridSB30px {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    row-gap: 30px;
 }
 .padd60px12vw {
     padding: 60px 12vw;
@@ -36,11 +48,11 @@ header>img {
 
 /* Section 1 */
 .sec1 {
-    background-color: aliceblue;
+    background-color: rgba(206, 219, 31, 0.453);
 }
 .sec1>h1,.sec1>h2 {
     padding: 10px 0px;
-    color: rgba(23, 23, 228, 0.748);
+    color: rgba(44, 20, 201, 0.947);
     font-weight: 600;
 }
 /* Section 1 */
@@ -50,3 +62,40 @@ header>img {
     width: 200px;
 }
 /* Section 2 */
+
+/* Section 3 */
+.sec3 {
+    background-color: aliceblue;
+}
+.sec3Caterory{
+    padding: 90px 0px 40px;
+    color: rgb(237, 11, 86);
+    font-family: cursive;
+    font-weight: 700;
+    font-size: 30px;
+}
+.card {
+    padding-bottom: 10px;
+    border: 2px solid rgb(14, 14, 14);
+    border-radius: 5px;
+    width: 15vw;
+    height: 350px;
+
+}
+.card>div>img {
+    width: 100%;
+    border-radius: 5px;
+}
+.card>button {
+    width: 100%;
+    border-radius: 5px;
+    background-color: greenyellow;
+    color: blue;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 550;
+    border: none;
+    cursor: pointer;
+}
+/* Card */
+
