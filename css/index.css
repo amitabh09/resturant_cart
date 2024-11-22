@@ -78,9 +78,8 @@ header>img {
     padding-bottom: 10px;
     border: 2px solid rgb(14, 14, 14);
     border-radius: 5px;
-    width: 15vw;
-    height: 350px;
-
+    width: 18vw;
+    height: 420px;
 }
 .card>div>img {
     width: 100%;
@@ -96,6 +95,17 @@ header>img {
     font-weight: 550;
     border: none;
     cursor: pointer;
+}
+.card>p {
+    width: 94%;
+}
+#quantityDiv{
+    visibility: hidden;
+    width: 94%;
+    transition: 2s;
+}
+.imgDiv{
+    height: 230px;
 }
 /* Card */
 
