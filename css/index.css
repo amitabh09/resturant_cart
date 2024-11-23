@@ -99,7 +99,7 @@ header>img {
 .card>p {
     width: 94%;
 }
-#quantityDiv{
+.quantityDiv{
     visibility: hidden;
     width: 94%;
     transition: 2s;
